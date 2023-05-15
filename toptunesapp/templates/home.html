@@ -1,0 +1,42 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h5>TOP TUNES MIX</h5>
+
+    <p><h4>Discover the best of each album effortlessly. Our music web app brings you the top three songs, so you don't have to stress about listening to everything. Start exploring now!</h4></p>
+
+    
+    
+    <form method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="exampleInputText" class="form-label">Album Id</label>
+          <input type="text" class="form-control" placeholder="Album Id" name="albumid">
+        </div>
+        <button type="submit" class="btn btn-primary">Get Top Tracks</button>
+    </form>
+
+    {% if top_tracks %}
+    <p>Here are the top three tracks from the album for your listening pleasure. Enjoy the finest selections curated just for you!</p>
+    {% for track in top_tracks %}
+    <ul>
+        <li>{{track.name}}</li>      
+    </ul>
+    {% endfor %}
+    {% endif %}
+
+    
+
+
+</body>
+</html>
