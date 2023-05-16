@@ -1,6 +1,7 @@
 from django.shortcuts import render
 import requests
 import json
+from django.conf import settings
 
 # Create your views here.
 
@@ -10,8 +11,8 @@ def home(request):
     if request.method == 'POST':
         albumid = request.POST['albumid']
 
-        CLIENT_ID = "646223e1b4234341b3fcf56f6c2f35b8"
-        CLIENT_SECRET = "38902bc57e744696a08031fd0efde906"
+        CLIENT_ID = settings.CLIENT_ID
+        CLIENT_SECRET = settings.CLIENT_SECRET
 
         grant_type = 'client_credentials'
         body_params = {'grant_type' : grant_type}
