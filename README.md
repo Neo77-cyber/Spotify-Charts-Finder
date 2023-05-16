@@ -9,17 +9,6 @@ The Spotify Chart Finder Recommender is a web application designed to enhance yo
 - Search for an album by albumid
 - List the top 3 tracks in the album
 
-
-## Installation
-
-1. Clone the repository: `git clone https://github.com/<your-github-username>/spotify-top-3-tracks.git`
-2. Navigate to the project directory: `cd spotify-top-3-tracks`
-3. Install the dependencies: `npm install`
-
-# Spotify Time Saver & Top Tracks Recommender
-
-The Spotify Time Saver & Top Tracks Recommender is a web application built with Django that enhances your music listening experience. This app saves you time by quickly accessing the top 3 songs in any album and provides personalized recommendations based on your music preferences, similar to the rating feature in Apple Music.
-
 ## Installation and Configuration
 
 Follow these steps to install and configure the Spotify Time Saver & Top Tracks Recommender:
